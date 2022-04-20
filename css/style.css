@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* Input
+*********************************************************/
+/* reset
+*********************************************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "游ゴシック", YuGothic, Verdana, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #FBF8F1;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+#tools {
+  margin: 50px auto;
+  width: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#tools input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+}
+
+#tools input[type="radio"] {
+  margin-right: 5px;
+}
+
+#tools input[type="submit"] {
+  border: none;
+  background: #54BAB9;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  padding: 15px 10px;
+  display: block;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#tools input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+#tools #inputForm {
+  background: #E9DAC1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 40px;
+}
+
+#tools #inputForm table {
+  width: 100%;
+}
+
+#tools #inputForm table th, #tools #inputForm table td {
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 0;
+}
+
+#tools #inputForm table th {
+  width: 100px;
+}
+
+#tools #inputForm table label {
+  cursor: pointer;
+}
+
+#tools #inputForm table li {
+  display: inline;
+}
+
+#tools #inputForm table li + li {
+  margin-left: 15px;
+}
+
+#tools #search {
+  background: #54BAB9;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#tools #cardList {
+  padding: 30px;
+  overflow-y: scroll;
+  height: 500px;
+  background: #F7ECDE;
+}
+
+#tools #cardList .card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+#tools #cardList .card + .card {
+  margin-top: 30px;
+}
+
+#tools #cardList .card h2 {
+  color: #54BAB9;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#tools #cardList .card .status {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  font-size: 11px;
+  padding: 3px 10px;
+  background: #E9DAC1;
+  border-radius: 0 0 10px 10px;
+}
+
+#tools #cardList .card button {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 11px;
+  padding: 8px 10px;
+  background: #54BAB9;
+  color: white;
+  border-radius: 0 0 0 10px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#tools #cardList .card button:hover {
+  opacity: 0.7;
+}
+
+#tools #cardList .card ul li {
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 20px;
+  color: gray;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>workload</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="tools">
+        <div id="inputForm">
+            <form @submit.prevent="createCard">
+                <table>
+                    <tr>
+                        <th>title</th>
+                        <td><input type="text"
+                            :value="cardNameSet"
+                            @input="cardNameStart"></td>
+                    </tr>
+                    <tr>
+                        <th>start</th>
+                        <td><input type="text"
+                            v-model="cardStartTime"></td>
+                    </tr>
+                    <tr>
+                        <th>status</th>
+                        <td>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="cardStatus" value="完了" id="finished"
+                                    v-model="cardStatus">
+                                    <label for="finished">完了</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="cardStatus" value="未完了" id="unfinished"
+                                    v-model="cardStatus">
+                                    <label for="unfinished">未完了</label>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Create">
+            </form>
+        </div><!-- /#inputForm -->
+        <div id="search">
+            <input type="text" placeholder="Search"
+            v-model="query">
+        </div><!-- /#search -->
+        
+        <div id="cardList" v-cloak>
+            <card-component
+            v-for="card in filteredList"
+            :key="card.key"
+            @costom-event="deleteCard"
+            :card="card">
+            </card-component>
+        </div><!-- /#cardList -->
+    </div><!-- /#tools -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>

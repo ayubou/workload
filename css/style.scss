@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* Input
+*********************************************************/
+$bgColor:#FBF8F1;
+$fontColor:#333;
+$firstColor:#F7ECDE;
+$secoundColor:#E9DAC1;
+$thirdColor:#54BAB9;
+
+/* reset
+*********************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+a {
+    display: inline-block;
+    color: $fontColor;
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "游ゴシック", YuGothic, Verdana, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
+    background: $bgColor;
+}
+
+[v-cloak]{
+    display: none;
+}
+
+ul,li{
+    list-style: none;
+}
+
+#tools{
+    margin:50px auto;
+    width: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    input[type="text"]{
+        width: 100%;
+        padding:10px;
+        font-size:16px;
+        box-sizing: border-box;
+        border:none;
+        border-radius: 3px;
+    }
+
+    input[type="radio"]{
+        margin-right: 5px;
+    }
+
+    input[type="submit"]{
+        border:none;
+        background: $thirdColor;
+        color:#fff;
+        font-size:16px;
+        width: 100%;
+        padding:15px 10px;
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        margin-top:15px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
+    #inputForm{
+        background: $secoundColor;
+        box-sizing: border-box;
+        padding: 30px 40px;
+        table{
+            width: 100%;
+            th,td{
+                text-align: left;
+                vertical-align: middle;
+                font-size:16px;
+                border:none;
+                box-sizing: border-box;
+                padding:5px 0;
+            }
+            th{
+                width: 100px;
+            }
+            label{
+                cursor: pointer;
+            }
+            li{
+                display: inline;
+                &+li{
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    #search{
+        background: $thirdColor;
+        padding:15px;
+        box-sizing: border-box;
+    }
+    #cardList{
+        padding:30px;
+        overflow-y: scroll;
+        height: 500px;
+        background: $firstColor;
+        .card{
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            &+.card{
+                margin-top:30px;
+            }
+            h2{
+                color:$thirdColor;
+                margin-bottom: 10px;
+                font-size:20px;
+            }
+            .status{
+                position: absolute;
+                right: 50px;
+                top: 0;
+                font-size: 11px;
+                padding: 3px 10px;
+                background: $secoundColor;
+                border-radius:0 0 10px 10px;
+            }
+            button{
+                border:none;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 11px;
+                padding: 8px 10px;
+                background: $thirdColor;
+                color:white;
+                border-radius: 0 0 0 10px;
+                cursor: pointer;
+                transition: all .3s;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    font-size:15px;
+                    margin-right:20px;
+                    color:gray;
+                }
+            }
+        }
+    }
+}
